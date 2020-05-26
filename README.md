@@ -1,3 +1,2 @@
 # sofia-y-santiago-proyecto-
-proyecto final
-...
+proyecto fina
