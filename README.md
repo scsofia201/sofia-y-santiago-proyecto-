@@ -18,6 +18,7 @@
              (if (>= 3 cont)
                  (begin (fondooak ventana)
                         (cond
+                        
                           ((= cont 1)
                            (begin
                              (sleep 2) ((draw-string ventana) (make-posn 50 330) "¡Hola a todos! ¡Bienvenidos al mundo de POKÉMON! ¡Me llamo OAK!" "black")
@@ -42,6 +43,7 @@
                  )) (dialogo-oak cont nombre ventana)) )
 
 (define (principal)
+
   (begin  
     (displayln "bienvenido a pokemon, por favor ingrese el nombre del jugador (no olvide ponerlo entre comillas)")
     (define nombre (read))
