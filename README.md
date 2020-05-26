@@ -1,6 +1,4 @@
 # sofia-y-santiago-proyecto-
-;proyecto final
-
 (require (lib "graphics.ss" "graphics"))
 (open-graphics)
 
@@ -40,10 +38,9 @@
                              (sleep 2)((draw-string ventana) (make-posn 50 390) "¡Adelante!" "black")
                              (dialogo-oak (+ cont 1) nombre ventana)))))
                  )) (dialogo-oak cont nombre ventana)) )
-
-(define (principal)
-(begin  
-    
+                 
+    (define (principal)
+    (begin  
     (displayln "bienvenido a pokemon, por favor ingrese el nombre del jugador (no olvide ponerlo entre comillas)")
     (define nombre (read))
     (newline)
