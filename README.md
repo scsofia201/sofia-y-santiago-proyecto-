@@ -1,7 +1,6 @@
 # sofia-y-santiago-proyecto-
 ;proyecto final
 
-
 (require (lib "graphics.ss" "graphics"))
 (open-graphics)
 
@@ -14,11 +13,11 @@
 
 (define (dialogo-oak cont nombre ventana)
   (if (equal? (key-value (get-key-press ventana)) (integer->char 13))
+      
       (begin ((draw-viewport ventana) "white")
-             (if (>= 3 cont)
+          (if (>= 3 cont)
                  (begin (fondooak ventana)
-                        (cond
-                        
+                      (cond
                           ((= cont 1)
                            (begin
                              (sleep 2) ((draw-string ventana) (make-posn 50 330) "¡Hola a todos! ¡Bienvenidos al mundo de POKÉMON! ¡Me llamo OAK!" "black")
@@ -43,8 +42,8 @@
                  )) (dialogo-oak cont nombre ventana)) )
 
 (define (principal)
-
-  (begin  
+(begin  
+    
     (displayln "bienvenido a pokemon, por favor ingrese el nombre del jugador (no olvide ponerlo entre comillas)")
     (define nombre (read))
     (newline)
@@ -53,6 +52,5 @@
     (define ventana (open-viewport "pokemon" 600 500))
     ((draw-pixmap ventana) "portada inicio.jpg" (make-posn 0 0) "blue")
     (dialogo-oak 1 nombre ventana)
-
     )) (principal)
 
